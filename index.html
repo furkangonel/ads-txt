@@ -16,7 +16,8 @@
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
             line-height: 1.6;
             color: #333;
-            background: linear-gradient(135deg, rgba(148, 192, 197, 0.5) 0%, rgba(148, 192, 197, 0.8) 100%);
+            background:linear-gradient(135deg, rgba(148, 192, 197, 0.5) 0%, rgba(148, 192, 197, 0.5)
+            100%);;
             min-height: 100vh;
         }
 
@@ -65,7 +66,7 @@
         }
 
         .nav-links a:hover {
-            color: #667eea;
+            color: rgba(148, 192, 197, 0.5);
         }
 
         /* Hero */
@@ -155,8 +156,9 @@
             text-align: center;
             padding: 2rem;
             border-radius: 16px;
-            background: linear-gradient(135deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 1) 100%);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 1) 100%);
             transition: transform .3s ease;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
         }
 
         .feature-card:hover {
@@ -179,11 +181,11 @@
         .feature-card h3 {
             font-size: 1.3rem;
             margin-bottom: 1rem;
-            color: white;
+            color: #333;
         }
 
         .feature-card p {
-            color: #f5f7fa;
+            color: #333;
             line-height: 1.6;
         }
 
@@ -228,8 +230,8 @@
 
         /* Footer */
         footer {
-            background: #333;
-            color: white;
+            background: white;
+            color: #333;
             text-align: center;
             padding: 2rem 0;
         }
@@ -252,14 +254,14 @@
             display: flex;
             align-items: center;
             gap: .5rem;
-            color: white;
+            color: #333;
             text-decoration: none;
             font-size: 1rem;
             transition: color .3s ease;
         }
 
         .social-links a:hover {
-            color: #667eea;
+            color: rgba(148, 192, 197, 0.8);
         }
 
         /* Responsive */
@@ -320,6 +322,11 @@
             <h2 data-i18n="features.title">Özellikler</h2>
             <div class="features-grid">
                 <div class="feature-card">
+                    <div class="feature-icon"><img src="images/sparkles.png" alt="sparkles" width="52" height="52" /></div>
+                    <h3 data-i18n="features.ai.title">Yapay Zeka Desteği</h3>
+                    <p data-i18n="features.ai.desc">Yapay zeka ile anında konu anlatımı ve soru üretimi.</p>
+                </div>
+                <div class="feature-card">
                     <div class="feature-icon"><img src="images/energy.png" alt="energy" width="52" height="52" /></div>
                     <h3 data-i18n="features.fast.title">Hızlı ve Güvenilir</h3>
                     <p data-i18n="features.fast.desc">Optimize edilmiş performans ile anlık sonuçlar alın. Güvenli veri
@@ -337,12 +344,6 @@
                     <h3 data-i18n="features.cloud.title">Bulut Senkronizasyonu</h3>
                     <p data-i18n="features.cloud.desc">Verileriniz tüm cihazlarınızda senkronize. İstediğiniz yerden,
                         istediğiniz zaman erişin.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon"><img src="images/bell.png" alt="bell" width="52" height="52" /></div>
-                    <h3 data-i18n="features.notify.title">Akıllı Bildirimler</h3>
-                    <p data-i18n="features.notify.desc">Önemli güncellemeler için akıllı bildirimler.
-                        Kişiselleştirilebilir hatırlatma sistemi.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon"><img src="images/chart.png" alt="chart" width="52" height="52" /></div>
@@ -400,7 +401,7 @@
         <div class="container">
             <div class="footer-content">
                 <div>
-                    <p data-i18n="footer.copy">© 2024 Lernig. Tüm hakları saklıdır.</p>
+                    <b data-i18n="footer.copy">© 2025 Lernig. Tüm hakları saklıdır.</b>
                 </div>
                 <div class="social-links">
                     <!-- mailto TR/EN metni script’te güncelleniyor -->
@@ -479,6 +480,10 @@
                 "features.title": "Özellikler",
                 "screenshots.title": "Ekran Görüntüleri",
 
+
+                "features.ai.title": "Akıllı Bildirimler",
+                "features.ai.desc": "Yapay zeka ile anında konu anlatımı ve soru üretimi.",
+
                 "features.fast.title": "Hızlı ve Güvenilir",
                 "features.fast.desc": "Optimize edilmiş performans ile anlık sonuçlar alın. Güvenli veri şifreleme ile bilgileriniz korunur.",
 
@@ -488,16 +493,13 @@
                 "features.cloud.title": "Bulut Senkronizasyonu",
                 "features.cloud.desc": "Verileriniz tüm cihazlarınızda senkronize. İstediğiniz yerden, istediğiniz zaman erişin.",
 
-                "features.notify.title": "Akıllı Bildirimler",
-                "features.notify.desc": "Önemli güncellemeler için akıllı bildirimler. Kişiselleştirilebilir hatırlatma sistemi.",
-
                 "features.analytics.title": "Detaylı Analiz",
-                "features.analytics.desc": "Kullanım istatistikleri ve detaylı raporlar. İlerlemenizi takip edin ve optimize edin.",
+                "features.analytics.desc": "Günlük çalışma süresi (süreye göre katkıların takvimde işaretlenmesi) ve günlük seri istatistikleri.",
 
                 "features.dark.title": "Karanlık Mod",
                 "features.dark.desc": "Göz dostu karanlık mod desteği. Sistem ayarlarınızla otomatik senkronizasyon.",
 
-                "footer.copy": "© 2024 Lernig. Tüm hakları saklıdır.",
+                "footer.copy": "© 2025 Lernig. Tüm hakları saklıdır.",
                 "footer.email": "E-posta"
             },
             en: {
@@ -514,6 +516,9 @@
                 "features.title": "Features",
                 "screenshots.title": "Screenshots",
 
+                "features.ai.title": "Artificial Intelligence",
+                "features.ai.desc": "Instant topic explanation and question generation with artificial intelligence.",
+
                 "features.fast.title": "Fast & Reliable",
                 "features.fast.desc": "Get instant results with optimized performance. Your data is protected with secure encryption.",
 
@@ -523,16 +528,13 @@
                 "features.cloud.title": "Cloud Sync",
                 "features.cloud.desc": "Your data stays in sync across devices. Access anywhere, anytime.",
 
-                "features.notify.title": "Smart Notifications",
-                "features.notify.desc": "Stay informed with smart, customizable reminders.",
-
                 "features.analytics.title": "Detailed Analytics",
-                "features.analytics.desc": "Track your progress with usage stats and insightful reports.",
+                "features.analytics.desc": "Daily working hours (contributions marked on the calendar according to duration) and daily serial statistics.",
 
                 "features.dark.title": "Dark Mode",
                 "features.dark.desc": "Eye-friendly dark mode that follows your system settings.",
 
-                "footer.copy": "© 2024 Lernig. All rights reserved.",
+                "footer.copy": "© 2025 Lernig. All rights reserved.",
                 "footer.email": "Email"
             }
         };
@@ -540,7 +542,7 @@
         // App Store linkleri (dile göre)
         const APP_STORE_LINKS = {
             tr: "https://apps.apple.com/tr/app/lernig/id6751505077?l=tr",
-            en: "https://apps.apple.com/app/lernig/id6751505077?l=en" // istersen /us/ kullan
+            en: "apps.apple.com/us/app/lernig/id6751505077"
         };
 
         function detectLang() {
@@ -563,7 +565,9 @@
             // Mailto (konu/gövde)
             const mail = document.getElementById("mailto-link");
             if (mail) {
-                const base = "mailto:defung.lernig@gmail.com";
+                const base = lang === "tr"
+                ? "mailto:defung.lernig@gmail.com"
+                : "mailto:defung.lernig.us@gmail.com";
                 const qp = lang === "tr"
                     ? "?subject=Lernig%20Destek&body=Merhaba%20Lernig%20ekibi%2C"
                     : "?subject=Lernig%20Support&body=Hello%20Lernig%20team%2C";
